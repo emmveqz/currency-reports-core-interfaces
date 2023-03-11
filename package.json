@@ -1,0 +1,37 @@
+{
+  "name": "@emmveqz/currency-reports-core-interfaces",
+  "version": "1.0.0",
+  "description": "Currency Reports (core interfaces)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npx tsc --build ./tsconfig.json",
+    "clean-js": "rm -f ./*.js",
+    "prepack": "npm run clean-js && rm -fR ./dist && npm run build",
+    "dummy": "test"
+  },
+  "author": "Emmanuel Velazquez Lopez",
+  "license": "ISC",
+  "homepage": "https://github.com/emmveqz/currency-reports-core-interfaces#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/emmveqz/currency-reports-core-interfaces.git"
+  },
+  "bugs": {
+    "url": "https://github.com/emmveqz/currency-reports-core-interfaces/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
+  },
+  "bundledDependencies": [
+  ],
+  "dependencies": {
+    "@types/node": "^12.7.3",
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "tslint": "^5.19.0",
+    "typescript": "^3.6.4"
+  }
+}
