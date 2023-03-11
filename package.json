@@ -27,6 +27,7 @@
   "bundledDependencies": [
   ],
   "dependencies": {
+    "@emmveqz/currency-reports-core-enums": "^1.0.0",
     "@types/node": "^12.7.3",
     "reflect-metadata": "^0.1.13"
   },
