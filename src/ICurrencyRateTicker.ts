@@ -1,26 +1,26 @@
 
-import type { CurrencyEnum }		from "btc-reports-core-enums"
+import type { CurrencyEnum }		from "@emmveqz/currency-reports-core-enums"
 import {
-	MyAsyncGenerator,
+  MyAsyncGenerator,
 }								from "./IUtils"
 
 //
 
 export type ICurrencyRateTickResult = {
-	rate:		number,
-	volume?:	number,
-	error?:		Error,
-	/**
-	 * Redundant for standalone tickers, but useful for many-in-one tickers.
-	 */
-	symbol?:	CurrencyEnum,
+  rate:		number,
+  volume?:	number,
+  error?:		Error,
+  /**
+   * Redundant for standalone tickers, but useful for many-in-one tickers.
+   */
+  symbol?:	CurrencyEnum,
 }
 
 export interface ICurrencyRateTicker {
 
-	secsPerTick: number
+  secsPerTick: number
 
-	Tick(currency: CurrencyEnum): MyAsyncGenerator<ICurrencyRateTickResult, Error|void>
+  Tick(currency: CurrencyEnum): MyAsyncGenerator<ICurrencyRateTickResult, Error|void>
 
 }
 

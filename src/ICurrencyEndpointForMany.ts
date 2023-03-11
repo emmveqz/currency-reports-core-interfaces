@@ -1,22 +1,22 @@
 
-import type { CurrencyEnum }					from "btc-reports-core-enums"
+import type { CurrencyEnum }					from "@emmveqz/currency-reports-core-enums"
 import ICurrencyEndpoint				from "./ICurrencyEndpoint"
 import {
-	ICurrencyRateTickerForManyResult,
+  ICurrencyRateTickerForManyResult,
 }										from "./ICurrencyRateTickerForMany"
 import {
-	JsonObj,
+  JsonObj,
 }										from "./IUtils"
 
 //
 
 export interface ICurrencyEndpointForMany extends ICurrencyEndpoint {
 
-	GetURIForMany(currencies: Array<CurrencyEnum>): string
+  GetURIForMany(currencies: Array<CurrencyEnum>): string
 
-	ParseApiResultForMany(json: JsonObj): ICurrencyRateTickerForManyResult
+  ParseApiResultForMany(json: JsonObj): ICurrencyRateTickerForManyResult
 
-	SerializeParams(currencies: Array<CurrencyEnum>): string | Error
+  SerializeParams(currencies: Array<CurrencyEnum>): string | Error
 
 }
 

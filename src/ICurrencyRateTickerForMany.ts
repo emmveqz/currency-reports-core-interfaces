@@ -1,25 +1,25 @@
 
-import type { CurrencyEnum }					from "btc-reports-core-enums"
+import type { CurrencyEnum }					from "@emmveqz/currency-reports-core-enums"
 import ICurrencyRateTicker, {
-	ICurrencyRateTickResult,
+  ICurrencyRateTickResult,
 }										from "./ICurrencyRateTicker"
 import {
-	MyAsyncGenerator,
+  MyAsyncGenerator,
 }										from "./IUtils"
 
 //
 
 export type ICurrencyRateTickerForManyResult = {
-	[enumId in CurrencyEnum]?: Error | {
-		rate:		number,
-	}
+  [enumId in CurrencyEnum]?: Error | {
+    rate:		number,
+  }
 }
 
 export interface ICurrencyRateTickerForMany extends ICurrencyRateTicker {
 
-	OpenWS(): Promise<boolean|Error>
+  OpenWS(): Promise<boolean|Error>
 
-	TickMany(currencies: Array<CurrencyEnum>): MyAsyncGenerator<ICurrencyRateTickResult, Error|void>
+  TickMany(currencies: Array<CurrencyEnum>): MyAsyncGenerator<ICurrencyRateTickResult, Error|void>
 
 }
 
