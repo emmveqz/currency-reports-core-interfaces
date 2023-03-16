@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "npx tsc --build ./tsconfig.json",
-    "clean-js": "rm -f ./*.js",
+    "clean-js": "rm -f ./src/*.js",
     "prepack": "npm run clean-js && rm -fR ./dist && npm run build",
     "dummy": "test"
   },
