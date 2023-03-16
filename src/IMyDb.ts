@@ -29,6 +29,7 @@ export type DbResult<T> = {
 } | DbErrorResult
 
 export interface IMyDb {
+  selectedSchema: string
   Get(queryBuilder: string|Error): Promise<DbResult<DbRow | null>>
   /**
    * When not updating or inserting rows, should not evaluate `DbResult.Value`,
